@@ -1,0 +1,38 @@
+<br></br>
+<div class="d-flex justify-content-center align-items-center">
+<h1>Ventas totales en WhataShop: ${{ventastotales}}</h1>
+<br></br>
+<h1>    promedio de ventas del ultimo mes: ${{pr}}</h1>
+</div>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Ventas con detalles</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID compra</th>
+          <th>Rut cliente</th>
+          <th>Cantidad productos</th>
+          <th>Metodo de pago</th>
+          <th>fecha</th>
+          <th>Total</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        {{#each ventas}}
+        <tr>
+          <td>{{this.id}}</td>
+          <td>{{this.rut_clientes}}</td>
+          <td>{{this.cantidad_productos}}</td>
+          <td>{{this.metodo_pago}}</td>
+          <td>{{this.fecha}}</td>
+          <td>${{this.total}}</td>
+        
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

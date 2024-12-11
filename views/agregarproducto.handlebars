@@ -1,0 +1,57 @@
+<body>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <div class="container text-center">
+            <h2 class="text-center">Agregar un producto</h2>
+          </div>
+          <div class="card-body">
+
+            
+            <form action="/productos" method="POST">
+
+
+              <div class="mb-3">
+                
+                <label for="codigo_proveedor" class="form-label">Codigo proveedor</label>
+                <input type="text" class="form-control" name="codigo_proveedor" placeholder="codigo">
+              </div>
+              <div class="mb-3">
+
+                <label for="precio" class="form-label">Precio del producto</label>
+                <input type="number" min="1" class="form-control" name="precio" placeholder="Precio">
+              </div>
+              
+              <div class="mb-3">
+
+                <label for="sexo" class="form-label">sexo</label>
+                <select class="form-select" name="sexo">
+                  <option value="hombre">Hombre</option>
+                  <option value="mujer">Mujer</option>
+                  <option value="unisex">Unisex</option>
+                </select>
+              </div>
+              <div class="mb-3">
+
+                
+
+                <label for="id_oferta" class="form-label">ID oferta (por defecto es 0)</label>
+                <input type="number" min="0"  class="form-control" name="id_oferta" value="0">
+              </div>
+
+              <button type="submit" class="btn btn-primary">Subir producto</button>
+
+            </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+

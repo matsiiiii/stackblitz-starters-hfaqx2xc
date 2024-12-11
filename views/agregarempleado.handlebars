@@ -1,0 +1,55 @@
+<body>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <div class="container text-center">
+            <h2 class="text-center">Agregar un empleado</h2>
+          </div>
+          <div class="card-body">
+
+            
+            <form action="/empleado" method="POST">
+
+
+              <div class="mb-3">
+                <label for="rut" class="form-label">Rut</label>
+                <input type="text" class="form-control" name="rut" placeholder="rut empleado">
+              </div>
+              <div class="mb-3">
+
+                <label for="tienda" class="form-label">Tienda</label>
+                <select class="form-select" name="tienda">
+                  <option value="4">Calle Huérfanos 456, Santiago de Chile</option>
+                  <option value="3">Mall Marina Arauco, Av. Libertad 123, Viña del Mar</option>
+                  
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text"  class="form-control" name="nombre" placeholder="Nombre empleado">
+              </div>
+              <div class="mb-3">
+                <label for="horas" class="form-label">Horas trabajadas</label>
+                <input type="number" min="0"  class="form-control" name="horas" placeholder="horas totales trabajadas">
+              </div>
+              <div class="mb-3">
+                <label for="ventas" class="form-label">Ventas totales</label>
+                <input type="number" min="0"  class="form-control" name="ventas" placeholder="horas totales trabajado">
+              </div>
+
+              <button type="submit" class="btn btn-primary">Subir producto</button>
+
+            </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+

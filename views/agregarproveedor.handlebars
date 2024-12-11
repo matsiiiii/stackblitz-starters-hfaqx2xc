@@ -1,0 +1,42 @@
+<body>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <div class="container text-center">
+            <h2 class="text-center">Agregar un proveedor</h2>
+          </div>
+          <div class="card-body">
+
+            
+            <form action="/proveedor" method="POST">
+
+
+              <div class="mb-3">
+                
+                <label for="pedidos_entregados" class="form-label">pedidos entregados</label>
+                <input type="number" min="0" class="form-control" name="pedidos_entregados" value="0">
+              </div>
+              <div class="mb-3">
+
+                <label for="infocontacto" class="form-label">informacion de contacto</label>
+                <input type="text"  class="form-control" name="infocontacto" placeholder="informacion de contacto">
+              </div>
+              
+              
+
+              <button type="submit" class="btn btn-primary">Subir nuevo proveedor</button>
+
+            </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+

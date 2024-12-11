@@ -1,0 +1,42 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Productos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center">Editar Productos</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Precio</th>
+          <th>sexo</th>
+          <th>stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each productos}}
+        <tr>
+          <td>{{this.id}}</td>
+          <td>{{this.precio}}</td>
+          <td>{{this.sexo}}</td>
+          <td>{{this.stock}}</td>
+          <td>
+            <a href="/editarformulario?respuesta={{this.id}}" class="btn btn-warning btn-sm">Editar</a>
+            <form action="/eliminarpr/{{this.id}}" method="POST">
+            <button type="sumbit" class="btn btn-black">🗑️</button>
+            </form>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <div class="d-flex justify-content-center align-items-center vh-1">
+    <a class="btn btn-success" href="/agregar/producto">Agregar nuevo producto</a>
+    </div>
+  </div>
+</body>
+</html>

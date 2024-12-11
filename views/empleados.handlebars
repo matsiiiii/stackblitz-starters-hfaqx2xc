@@ -1,0 +1,44 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empleados</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center">Empleados</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Rut</th>
+          <th>ID Tienda</th>
+          <th>Nombre</th>
+          <th>Horas</th>
+          <th>Ventas</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each productos}}
+        <tr>
+          <td>{{this.rut}}</td>
+          <td>{{this.id_tienda}}</td>
+          <td>{{this.nombre}}</td>
+          <td>{{this.horas}}</td>
+          <td>{{this.ventas}}</td>
+          <td>
+            <a href="/editarEmpleados?respuesta={{this.rut}}" class="btn btn-warning btn-sm">Editar</a>
+            <form action="/eliminar/{{this.rut}}" method="POST">
+            <button type="sumbit" class="btn btn-black">🗑️</button>
+            </form>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+   <div class="d-flex justify-content-center align-items-center vh-1">
+    <a class="btn btn-success" href="/agregar/empleado">Agregar nuevo empleado</a>
+    </div>
+  </div>
+</body>
+</html>

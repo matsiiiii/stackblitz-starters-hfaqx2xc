@@ -1,0 +1,44 @@
+<body>
+  
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <div class="container text-center">
+            <h2 class="text-center">Ingresa los nuevos datos del producto</h2>
+          </div>
+          <div class="card-body">
+
+            
+            <form action="/proveedores/{{this.codigo}}/editar" method="POST">
+            
+
+              <div class="mb-3">
+                
+                <label for="infocontacto" class="form-label">correo (si no se edita permanece igual)</label>
+                
+                <input type="text" class="form-control" name="infocontacto" value="{{this.infocontacto}}">
+              </div>
+              <div class="mb-3">
+
+                <label for="pedidos_entregados" class="form-label">Pedidos entregados</label>
+                <input type="number" min="1" class="form-control" name="pedidos_entregados" value="{{this.pedidos_entregados}}">
+              </div>
+              
+              
+              </div>
+
+              <button type="submit" class="btn btn-primary">Subir nuevos datos</button>
+
+            </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+

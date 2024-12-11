@@ -1,0 +1,41 @@
+
+<section class="about-us bg-light py-5">
+    <div class="row mt-0">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-12" style="text-align: center">
+            <h1>Catalogo actual en WhataShop</h1>
+            <br></br>
+            <div class="text container-center">
+              <h6>
+                
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<div class="container mt-4">
+<div class="row g-4">
+  {{#each listado}}
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+      <div class="card btn">
+        <a  class="card-link">
+          <img src="{{this.url}}" class="card-img-top">
+        </a>
+        <div class="card-body">
+          <h6 class="card-title">ID: {{this.id}}</h6>
+          <p class="card-text">Genero: {{this.sexo}}</p>
+          <p class="card-text">${{this.precio}}</p>
+          <a href="/editarformulario?respuesta={{this.id}}" class="btn btn-warning btn-sm">Editar</a>
+          
+        </div>
+        <form action="/carrito/add/{{this.id}}"  method="POST">
+      
+    </form>
+      </div>
+    </div>
+  {{/each}}
+</div>
+</div>

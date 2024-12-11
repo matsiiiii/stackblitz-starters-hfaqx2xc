@@ -1,0 +1,39 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proveedores</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center">Proveedores</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Pedidos Entregados</th>
+          <th>Contacto</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each productos}}
+        <tr>
+          <td>{{this.codigo}}</td>
+          <td>{{this.pedidos_entregados}}</td>
+          <td>{{this.infocontacto}}</td>
+          <td><img src="{{this.url}}" alt="{{this.nombre}}" style="width: 50px;"></td>
+          <td>
+            <a href="/editarformprov?respuesta={{this.codigo}}" class="btn btn-warning btn-sm">Editar</a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+   <div class="d-flex justify-content-center align-items-center vh-1">
+    <a class="btn btn-success" href="/agregar/proveedor">Agregar nuevo proveedor</a>
+    </div>
+  </div>
+</body>
+</html>
